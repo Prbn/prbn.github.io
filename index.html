@@ -29,7 +29,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link " href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link " href="#publications">Projects</a></li>
                 <li class="nav-item"><a class="nav-link " href="#certifications">Certifications</a></li>
             
             </ul>
@@ -66,7 +66,7 @@
                 <div class="carousel-item">
                     <img class="d-block img-fluid" src="images/slider/img_back_2.jpg" alt="Second slide">
                     <div class="carousel-caption"> 
-                        <h1 class="bordered-text"> Welcome to my Portfolio! </h1>
+                        <h1 class="bordered-text"> Welcome to my <span class="decorate"> Portfolio! </span> </h1>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -229,33 +229,56 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="p-5">
+    <section id="publications" class="section-padding">
         <div class="container">
-            <h2 class="text-center">Projects</h2>
+            <h1 class="text-center mb-5 bordered-text">Projects</h1>
+            <style>.bordered-text {
+                color: white !important; 
+                text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;}
+            </style>
             <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <h5>Unified Data Access with Multi-Database Integration</h5>
-                    <p>Integrated relational and non-relational databases to improve data management efficiency.</p>
-                    <a href="https://github.com/Prbn/Unified-Data-Access-with-Multi-Database-Integration" target="_blank" class="btn btn-outline-primary">GitHub</a>
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Unified Data Access">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Unified Data Access with Multi-Database Integration</h5>
+                            <p class="card-text">Integrated diverse databases (Apache Spark, MongoDB, HBase, Cassandra, Redis, Kafka, Neo4j) using Apache Drill for SQL-based querying, improving data access and management efficiency. Published on Docker and GitHub.</p>
+                            <a href="https://github.com/Prbn/Unified-Data-Access-with-Multi-Database-Integration" target="_blank" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <h5>Legal Contract Q&A Bot</h5>
-                    <p>Developed a system for legal document Q&A using LangChain and OpenAI language models.</p>
-                    <a href="https://github.com/Prbn/Legal-Contract-QA-Bot" target="_blank" class="btn btn-outline-primary">GitHub</a>
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Legal Contract Q&A Bot">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Legal Contract Q&A Bot</h5>
+                            <p class="card-text">Developed a Retrieval Augmented Generation (RAG) system for legal contract Q&A using LangChain, OpenAI models, and ChromaDB for effective information retrieval.</p>
+                            <a href="https://github.com/Prbn/Legal-Contract-QA-Bot" target="_blank" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <h5>Credit Risk Analysis with Machine Learning</h5>
-                    <p>Explored credit risk analysis using machine learning algorithms for predictive insights.</p>
-                    <a href="https://github.com/Prbn/Credit-Risk-Analysis-with-Machine-Learning" target="_blank" class="btn btn-outline-primary">GitHub</a>
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/project3.jpg" class="card-img-top" alt="Credit Risk Analysis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Credit Risk Analysis with Machine Learning</h5>
+                            <p class="card-text">Applied machine learning for credit risk analysis, focusing on loan default prediction. Shared findings and methodologies to aid in understanding predictive models.</p>
+                            <a href="https://github.com/Prbn/Credit-Risk-Analysis-with-Machine-Learning" target="_blank" class="btn btn-primary text-center">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Certifications Section -->
     <section id="certifications" class="p-5 bg-light">
         <div class="container">
-            <h2 class="text-center">Certifications</h2>
+            <h1 class="text-center">Certifications</h1>
             <div class="row text-center">
                 <div class="col-md-4">
                     <h5>Fabric Analytics Engineer</h5>
@@ -265,6 +288,7 @@
                 <div class="col-md-4">
                     <h5>Microsoft Office Specialist</h5>
                     <p>Microsoft Certification</p>
+                    <a href="https://www.credly.com/go/W6rrp8Z6A4WsxxAcISHq7Q" target="_blank" class="btn btn-outline-primary">View Certificate</a>
                 </div>
             </div>
         </div>
