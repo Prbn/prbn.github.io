@@ -16,7 +16,6 @@
 
 </head>
 
-
 <body>
     <!-- Navbar -->
     <section id="nav-bar">
@@ -106,7 +105,12 @@
         color: white !important; 
         text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
         }
-
+        #imgg {
+            width: auto;
+            height: auto;
+            max-width: 50%;
+            max-height: 50%;
+        }
     </style>
 
     <!-- Gallery -->
@@ -178,7 +182,132 @@
             text-align: center;
         }
     </style>
+    <style>
 
+        /* Styling for the Projects Section */
+        #publications {
+            padding: 50px 0;
+        }
+
+        .bordered-text {
+            color: white !important;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+
+        /* Grid Layout for Projects */
+        .projectsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        /* Individual Project Card Styling */
+        .projectCard {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        /* Image Wrapper Styling */
+        .imageWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* Set a fixed height for all images */
+            overflow: hidden;
+        }
+
+        /* Project Image Styling */
+        .projectImage {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Project Title Styling */
+        .projectTitle {
+            font-size: 1.25rem;
+            margin: 15px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Project Description Styling */
+        .projectDescription {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            padding: 0 10px;
+            text-align: justify;
+            flex-grow: 1;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+    <!-- Projects Section -->
+    <section id="publications" class="section-padding">
+        <div class="container">
+            <h1 class="text-center mb-5 bordered-text">Projects</h1>
+            <div class="projectsGrid">
+                <!-- Project 1 -->
+                <div class="projectCard">
+                    <div class="imageWrapper">
+                        <img src="images/projects/posters/Project_poster_Integration_1.gif" alt="Unified Data Access" class="projectImage">
+                    </div>
+                    <h5 class="projectTitle">Unified Data Access with Multi-Database Integration</h5>
+                    <p class="projectDescription">Integrated diverse databases (Apache Spark, MongoDB, HBase, Cassandra, Redis, Kafka, Neo4j) using Apache Drill for SQL-based querying, improving data access and management efficiency. Published on Docker and GitHub.</p>
+                    <a href="https://github.com/Prbn/Unified-Data-Access-with-Multi-Database-Integration" target="_blank" class="btn btn-primary">GitHub</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="projectCard">
+                    <div class="imageWrapper">                    
+                        <img src="images/projects/posters/Project_poster_AI_QA_1.gif" alt="Legal Contract Q&A Bot" class="projectImage">
+                    </div>
+                    <h5 class="projectTitle">Legal Contract Q&A Bot</h5>
+                    <p class="projectDescription">Developed a Retrieval Augmented Generation (RAG) system for legal contract Q&A using LangChain, OpenAI models, and ChromaDB for effective information retrieval.</p>
+                    <a href="https://github.com/Prbn/Legal-Contract-QA-Bot" target="_blank" class="btn btn-primary">GitHub</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="projectCard">
+                    <div class="imageWrapper"> 
+                        <img src="images/projects/posters/project_SCM_1.jpg" alt="Supply Chain Analysis" class="projectImage">
+                    </div>
+                    <h5 class="projectTitle">Supply Chain Analysis Using Spark</h5>
+                    <p class="projectDescription">Analyzed a dataset of 180,000 rows and 53 columns of supply chain-related information using PySpark to assess the risk of late deliveries and suggest optimizations in the supply chain.</p>
+                    <a href="https://github.com/Prbn/Supply-Chain-Analysis" target="_blank" class="btn btn-primary">GitHub</a>
+                </div>
+                <!-- Project 4 -->
+                <div class="projectCard">
+                    <div class="imageWrapper"> 
+                        <img src="images/projects/posters/Project_CR_1.gif" alt="Credit Risk Analysis" class="projectImage">
+                    </div>
+                    <h5 class="projectTitle">Credit Risk Analysis with Machine Learning</h5>
+                    <p class="projectDescription">Applied machine learning for credit risk analysis, focusing on loan default prediction. Shared findings and methodologies to aid in understanding predictive models.</p>
+                    <a href="https://github.com/Prbn/Credit-Risk-Analysis-with-Machine-Learning" target="_blank" class="btn btn-primary">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- About Section -->
     
     <!--About-->
@@ -218,89 +347,169 @@
 
         </div>
     </section>
+    <style>
+        /* Small Screens (max-width: 640px) */
+        @media screen and (max-width: 640px) {
+            .skillsGrid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns on small screens */
+                gap: 20px;
+                grid-auto-rows: auto;
+            }
 
+            /* .skillsGrid img {
+                height: 75px; 
+                width: 75px;
+            } */
+
+            .skills {
+                background-color: whitesmoke;
+                display: block; /* Change to block as flex is not needed here */
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        }
+
+        /* Medium Screens (min-width: 641px) */
+        @media screen and (min-width: 641px) {
+            .skillsGrid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+                gap: 30px;
+                grid-auto-rows: auto;
+            }
+
+            .skillsGrid_img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .skills {
+                /* background-color: whitesmoke; */
+                display: block; /* Change to block as flex is not needed here */
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        }
+
+        /* Large Screens (min-width: 1080px) */
+        @media screen and (min-width: 1080px) {
+            .skillsGrid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr); /* 6 columns on large screens */
+                gap: 20px;
+                grid-auto-rows: auto;
+            }
+
+            .skillsGrid_img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }           
+
+            .skills {
+                /* background-color: whitesmoke; */
+                display: block; /* Change to block as flex is not needed here */
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                /* height: 100vh; Ensure the section takes full height */
+            }
+        }
+    </style>
     <!-- Skills Section -->
     <section id="skills" class="p-5 bg-light">
         <div class="container">
-            <h2 class="text-center">Skills</h2>
-            <div class="skills-diagram text-center" data-cb-username="Prbn"></div>
+            <h1 class="text-center mb-5 bordered-text">Skills</h1>
+            <div class="skills">            
+                <div class="skillsGrid">
+                    <img class="skillsGrid_img" src="images/icons/python-original-wordmark.svg" alt="The logo icon for Python" title="Python"/>
+                    <img class="skillsGrid_img" src="images/icons/AWS.svg" alt="The logo icon for AWS" title="AWS" />
+                    <img class="skillsGrid_img" src="./images/icons/tableau.svg" alt="The logo icon for Tableau" title="Tableau" />
+                    <img class="skillsGrid_img" src="images/icons/power-bi@logotyp.us.svg" alt="Power BI" title="Power BI">
+                    <img class="skillsGrid_img" src="images/icons/Databricks_Logo.png" alt="Databricks" title="Databricks">                
+                    <img class="skillsGrid_img" src="./images/icons/apache_spark_logo_icon_170561.svg" alt="The logo icon for Apache Spark" title="Apache Spark" />
+                    <img class="skillsGrid_img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original-wordmark.svg" alt="The logo icon for Hadoop" title="Hadoop" />
+                    <img class="skillsGrid_img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original-wordmark.svg" alt="The logo icon for PyTorch" title="PyTorch" />
+                    <img class="skillsGrid_img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original-wordmark.svg" alt="The logo icon for Azure" title="Azure" />
+                    <img class="skillsGrid_img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="The logo icon for Java" title="Java" />
+                    <img class="skillsGrid_img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="The logo icon for GitHub" title="GitHub" />
+                    <img class="skillsGrid_img" src="images/icons/mysql-original-wordmark.svg" alt="The logo icon for MySQL" title="MySQL" />
+                    <img class="skillsGrid_img" src="images/icons/SAS_logo_horiz.svg" alt="The logo icon for SAS" title="SAS" />
+                    <img class="skillsGrid_img" src="images/icons/salesforce.svg" alt="Salesforce" title="Salesforce"> 
+                    <img class="skillsGrid_img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" alt="The logo icon for Redis" title="Redis" />
+
+                </div>
+            </div>
         </div>
         <script src="skills-diagram.coderbits.js"></script>
     </section>
 
-    <!-- Projects Section -->
-    <section id="publications" class="section-padding">
-        <div class="container">
-            <h1 class="text-center mb-5 bordered-text">Projects</h1>
-            <style>.bordered-text {
-                color: white !important; 
-                text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;}
-            </style>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/projects/posters/Project_poster_Integration_1.gif" class="card-img-top" alt="Unified Data Access">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Unified Data Access with Multi-Database Integration</h5>
-                            <p class="card-text">Integrated diverse databases (Apache Spark, MongoDB, HBase, Cassandra, Redis, Kafka, Neo4j) using Apache Drill for SQL-based querying, improving data access and management efficiency. Published on Docker and GitHub.</p>
-                            <a href="https://github.com/Prbn/Unified-Data-Access-with-Multi-Database-Integration" target="_blank" class="btn btn-primary text-center">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/projects/posters/Project_poster_AI_QA_1.gif" class="card-img-top" alt="Legal Contract Q&A Bot">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Legal Contract Q&A Bot</h5>
-                            <p class="card-text">Developed a Retrieval Augmented Generation (RAG) system for legal contract Q&A using LangChain, OpenAI models, and ChromaDB for effective information retrieval.</p>
-                            <a href="https://github.com/Prbn/Legal-Contract-QA-Bot" target="_blank" class="btn btn-primary text-center">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/projects/posters/project_SCM_1.jpg" class="card-img-top" alt="Poster showing Supply Chain Analysis">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Supply Chain Analysis Using Spark</h5>
-                            <p class="card-text">In this project, we use PySpark to analyze a dataset sourced from Kaggle that contains 180,000 rows and 53 columns of supply chain-related information, including transaction, financial, customer, order, product, and shipping data. Our main objective is to assess the risk of late deliveries and suggest optimizations in the supply chain.</p>
-                            <a href="https://github.com/Prbn/Supply-Chain-Analysis" target="_blank" class="btn btn-primary text-center">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/projects/posters/Project_CR_1.gif" class="card-img-top" alt="Credit Risk Analysis">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Credit Risk Analysis with Machine Learning</h5>
-                            <p class="card-text">Applied machine learning for credit risk analysis, focusing on loan default prediction. Shared findings and methodologies to aid in understanding predictive models.</p>
-                            <a href="https://github.com/Prbn/Credit-Risk-Analysis-with-Machine-Learning" target="_blank" class="btn btn-primary text-center">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+    <style>
 
+        /* Styling for the Certifications Section */
+        #certifications {
+            padding: 50px 0;
+        }
 
+        #certifications h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Certification Badge Styling */
+        .certificationBadge {
+            width: 150px; /* Set a fixed width for all badges */
+            height: 150px; /* Set a fixed height for all badges */
+            object-fit: contain; /* Ensures the entire badge is visible without distortion */
+            margin-bottom: 15px;
+        }
+
+        /* Button Styling */
+        .btn-outline-primary {
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .certificationBadge {
+                width: 80px; /* Adjust size for smaller screens */
+                height: 80px;
+            }
+        }        
+    </style>
     <!-- Certifications Section -->
     <section id="certifications" class="p-5 bg-light">
         <div class="container">
             <h1 class="text-center">Certifications</h1>
             <div class="row text-center">
+                <!-- Certification 1 -->
                 <div class="col-md-4">
-                    <h5>Fabric Analytics Engineer</h5>
-                    <p>Microsoft Certification</p>
+                    <img src="images/icons/microsoft-certified-associate-badge.svg" alt="Fabric Analytics Engineer Badge" class="certificationBadge">
+                    <h5>Fabric Analytics Engineer Associate</h5>
+                    <p>Microsoft Certified</p>
                     <a href="https://www.credly.com/go/W6rrp8Z6A4WsxxAcISHq7Q" target="_blank" class="btn btn-outline-primary">View Certificate</a>
+                    <!-- <p class="color-text-subtle font-size-lg margin-bottom-xs">
+                        As a Fabric analytics engineer associate, I have subject matter expertise in designing, creating, and deploying enterprise-scale data analytics solutions.
+                    </p> -->
                 </div>
+                <!-- Certification 2 -->
                 <div class="col-md-4">
+                    <img src="images/icons/MOS_Excel.png" alt="Microsoft Office Specialist Badge" class="certificationBadge">
                     <h5>Microsoft Office Specialist</h5>
                     <p>Microsoft Certification</p>
                     <a href="https://www.credly.com/go/W6rrp8Z6A4WsxxAcISHq7Q" target="_blank" class="btn btn-outline-primary">View Certificate</a>
+                </div>
+                <!-- Certification 3 -->
+                <div class="col-md-4">
+                    <img src="images/icons/AWS-Certified-Data-Engineer-Associate_badge_150x150.c957987af8e4ecddaf04e6ab06eb92241c439c9e.png" alt="AWS Data Engineer" class="certificationBadge">
+                    <h5>AWS Certified Data Engineer - Associate</h5>
+                    <a href="https://www.credly.com/go/W6rrp8Z6A4WsxxAcISHq7Q" target="_blank" class="btn btn-outline-primary">View Certificate</a>
+                    <!-- <p class="color-text-subtle font-size-lg margin-bottom-xs">
+                        AWS Certified Data Engineer - Associate validates skills and knowledge in core data-related AWS services, ability to ingest and transform data, orchestrate data pipelines while applying programming concepts, design data models, manage data life cycles, and ensure data quality.
+                    </p> -->
                 </div>
             </div>
         </div>
